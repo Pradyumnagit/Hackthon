@@ -43,7 +43,7 @@ withEnv( ["ANT_HOME=${tool antVersion}"] ) {
 ])
   }
 
-    stage ('docker deploy')
+    stage ('deploy')
 sh "sudo docker run --name dockerappcontainer-new_latest_1234 -d -p 8046:8080 dockerappimage-new "
     
 }
